@@ -3,12 +3,13 @@ jdk:
 - oraclejdk8
 services:
 - mongodb
+sudo: required
 notifications:
   email:
     on_success: always
     on_failure: always
 script:
-- ant test
+- ./test.sh
 #after_failure:
 #- git config user.email "$GITEMAIL"
 #- git config user.name  "$GITUSER"
