@@ -4,6 +4,9 @@ jdk:
 services:
 - mongodb
 sudo: required
+before_install:
+  openssl aes-256-cbc -K $encrypted_2deaa2cefe7d_key -iv $encrypted_2deaa2cefe7d_iv -in ubuntukeypair.pem.enc -out ubuntukeypair.pem -d
+  chmod 600 ubuntukeypair.pem
 notifications:
   email:
     on_success: always
