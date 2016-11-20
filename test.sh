@@ -6,7 +6,7 @@ timestamp() {
 
 
 ant
-for ((i=1; i<=1; i++)); do
+for ((i=1; i<=5000; i++)); do
 	TIMESTAMP=`timestamp`
 	echo "Test number $i, $TIMESTAMP"
 	ant test > ${TRAVIS_BUILD_NUMBER}_${TIMESTAMP}_log.log
