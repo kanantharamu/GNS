@@ -4,10 +4,10 @@ jdk:
 services:
 - mongodb
 addons:
-  ssh_known_hosts: ec2-35-163-11-182.us-west-2.compute.amazonaws.com
+  ssh_known_hosts: date.cs.umass.edu
 sudo: required
 before_install:
-  openssl aes-256-cbc -K $encrypted_2deaa2cefe7d_key -iv $encrypted_2deaa2cefe7d_iv -in ubuntukeypair.pem.enc -out ubuntukeypair.pem -d; chmod 600 ubuntukeypair.pem;
+  openssl aes-256-cbc -K $encrypted_6696f24aadce_key -iv $encrypted_6696f24aadce_iv -in id_rsa.enc -out id_rsa -d; chmod 600 id_rsa;
 notifications:
   email:
     on_success: always
